@@ -17,17 +17,17 @@ for i in range(100):
         '''lanzamos el dado'''
         dado = randint(1, 6)
         y = y + 1
-        '''si el resultado es par ganamos el doble de lo apostado, es decir: 20 monedas'''
+        '''si el resultado es par ganamos el doble de lo apostado'''
         if (math.fmod(dado,2)==0):
-            coins = coins + 20
+            coins = coins + 10
         else:
             ''' si no es par perdemos lo apostado: 10 monedas '''
             coins = coins - 10
     ''' acmulamos las monedas para despues sacar el promedio '''
     acum = acum + coins
     print(f"corridas: {y}, monedas: {coins}")
-    ''' contamos las veces en las que nos quedamos sin dinero '''
-    if coins <= 0:
+    ''' contamos las veces en las que nos quedamos sin el dinero inicial '''
+    if coins <= 200:
         t=t+1
 
     print("********************************")
